@@ -68,6 +68,12 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 		<!-- end::springJdbcTemplate[] -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+
 		<!-- tag::h2database[] -->
 		<dependency>
 			<groupId>com.h2database</groupId>

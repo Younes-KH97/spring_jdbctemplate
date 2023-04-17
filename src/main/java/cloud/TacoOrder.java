@@ -2,6 +2,9 @@ package cloud;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -11,16 +14,19 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Data
+@Table // Optional... Required just if u need to make another name of the table in the db
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private Long id;
 
     private Instant placedAt;
 
-
+    @Column("customer name")
     @NotBlank(message="Delivery name is required")
     private String deliveryName;
 
