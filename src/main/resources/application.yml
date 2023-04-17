@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+    url: jdbc:h2:mem:tacocloud;DB_CLOSE_ON_EXIT=FALSE
+    hikari:
+      close-on-connection-failure: false
+
+server:
+  port: 8081
+
